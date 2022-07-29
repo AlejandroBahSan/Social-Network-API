@@ -3,7 +3,7 @@ const { User, Thought } = require("../models");
 
 module.exports = {
   // Get all students
-  getAllUser(req, res) {
+  getAllUsers(req, res) {
     User.find({})
       .populate({
         path: "friends",
@@ -68,17 +68,16 @@ module.exports = {
   },
 
   // Delete an user
-  deleteUser({ params }, res) {
+  removeUser({ params }, res) {
     User.findOneAndDelete({ _id: params.id })
-      .then((userData) => {
-        if (!userData) {
-          return res.status(404).json({ message: "No user with this id!" });
-        }
-        // $in finds specific searchs
-        return Thought.deleteMany({ _id: { $in: userData.thoughts } });
+      .then(userData => {
+        return !userData
+          ? res.status(404).json({ message: "No user with this id!" })
+          // $in finds specific searchs
+          : Thought.deleteMany({ _id: { $in: userData.thoughts } });
       })
       .then(() => {
-        res.json({ message: "User and associated thoughts deleted!" });
+        res.json({ message: `User id ${params.id} and associated thoughts deleted!` });
       })
       .catch((err) => res.json(err));
   },
@@ -86,16 +85,16 @@ module.exports = {
   // Add a friend
   addFriend({ params }, res) {
     User.findOneAndUpdate(
-      { _id: params.userId },
-      { $addToSet: { friends: params.friendId } },
-      { new: true, runValidators: true }
-    )
-      .then((userData) => {
-        if (!userData) {
-          res.status(404).json({ message: "No user with this id" });
-          return;
-        }
-        res.json(userData);
+      { _id: params.id },
+      { $push: { friends: params.friendId } },
+      { new: true, runValidators: true })
+      .populate({ path: 'friends', select: ('-__v') })
+      .select('-__v')
+      .then(userData => {
+        console.log(userData);
+        return !userData
+          ? res.status(404).json({ message: "No user with this id" })
+          : res.json(userData);
       })
       .catch((err) => res.json(err));
   },
@@ -103,15 +102,15 @@ module.exports = {
   // Delete a friend
   removeFriend({ params }, res) {
     User.findOneAndUpdate(
-      { _id: params.userId },
+      { _id: params.id },
       { $pull: { friends: params.friendId } },
-      { new: true }
-    )
-      .then((userData) => {
-        if (!userData) {
-          return res.status(404).json({ message: "No user with this id!" });
-        }
-        res.json(userData);
+      { new: true })
+      .populate({ path: 'friends', select: '-__v' })
+      .select('-__v')
+      .then(userData => {
+        return !userData
+          ? res.status(404).json({ message: "No user with this id" })
+          : res.json(userData);
       })
       .catch((err) => res.json(err));
   },

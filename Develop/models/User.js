@@ -16,7 +16,7 @@ const userSchema = new Schema({
         required: 'Username is require, only alphanumeric characters are accepted',
         trim: true,
         match: [ 
-          /^[\w+]{6,8}$/, 'Please fill a valid username'
+          /^[\w+]{6,32}$/, 'Please fill a valid username'
       ]
     },
     email: {
