@@ -33,7 +33,7 @@ After this you can start using your REST client. For more please watch the follo
 
 [![Google Drive](https://img.shields.io/static/v1?style=for-the-badge&message=Google+Drive&color=4285F4&logo=Google+Drive&logoColor=FFFFFF&label=Walkthrough.Start.Server)](https://drive.google.com/file/d/12g9Fup1IpzmT9GIPLJFqYJ3H-hToUq7m/view?usp=sharing)
 
-[![Google Drive](https://img.shields.io/static/v1?style=for-the-badge&message=Google+Drive&color=4285F4&logo=Google+Drive&logoColor=FFFFFF&label=Walkthrough.Routes)](https://drive.google.com/file/d/1j07RFrzJ6aphkmA7fG4FrOCo3yu9cW7f/view?usp=sharing)
+[![Google Drive](https://img.shields.io/static/v1?style=for-the-badge&message=Google+Drive&color=4285F4&logo=Google+Drive&logoColor=FFFFFF&label=Walkthrough.Routes)](https://drive.google.com/file/d/1UrEoqy1oEhECdpfpchpzhQS9M3x4MiDJ/view?usp=sharing)
 
   
 ## Usage:
@@ -52,7 +52,7 @@ Social network web application where users can share their thoughts, react to fr
 ## Quick Demo
  #### [![Google Drive](https://img.shields.io/static/v1?style=for-the-badge&message=Google+Drive&color=4285F4&logo=Google+Drive&logoColor=FFFFFF&label=Walkthrough.Start.Server)](https://drive.google.com/file/d/12g9Fup1IpzmT9GIPLJFqYJ3H-hToUq7m/view?usp=sharing)
 
-[![Google Drive](https://img.shields.io/static/v1?style=for-the-badge&message=Google+Drive&color=4285F4&logo=Google+Drive&logoColor=FFFFFF&label=Walkthrough.Routes)](https://drive.google.com/file/d/1j07RFrzJ6aphkmA7fG4FrOCo3yu9cW7f/view?usp=sharing) 
+[![Google Drive](https://img.shields.io/static/v1?style=for-the-badge&message=Google+Drive&color=4285F4&logo=Google+Drive&logoColor=FFFFFF&label=Walkthrough.Routes)](https://drive.google.com/file/d/1UrEoqy1oEhECdpfpchpzhQS9M3x4MiDJ/view?usp=sharing) 
  ![Demo](https://github.com/AlejandroBahSan/Social-Network-API/blob/master/Assets/SocialNetworkAPI-Demo.gif)
 </p>
  
