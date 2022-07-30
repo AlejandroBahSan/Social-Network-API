@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # E-Commerce-BackEnd
  ### ![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)
   ## Table of Contents:
@@ -98,3 +99,7 @@ Internet retail, also known as e-commerce, is the largest sector of the electron
   ## Questions:
   #### Github Profile: AlejandroBahSan
   #### For aditional questions hmu by email: alejandro.bahsan@gmail.com
+=======
+# Social-Network-API
+:leaves: Social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. Built with Express.js for routing, a MongoDB database, and the Mongoose ODM.
+>>>>>>> 6504b9f6568be417a66e73fe1b947eb0cd11ea3c
